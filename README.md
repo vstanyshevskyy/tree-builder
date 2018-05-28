@@ -5,26 +5,26 @@ This is a small React app that parses string representation of a tree (i.e. tabl
 See the live version hosted on [Netlify](https:://www.netlify.com) - [Tree Builder](https://tree-builder.netlify.com)
 
 ## UX and UI
-I'm not a designer, but modern web is all the same - navbar at the top and content below.
+I'm not a designer, but modern web is all the same - navbar at the top and the content below.
 
-Yes, Tree Builder is responsive. Nothing more to say about the design.
+Tree Builder is responsive. Nothing more to say about the design.
 
 But what is more important is that Tree Builder is Progressive Web Application.
-So this app has basic service worker that caches the requests and user can enjoy the app while being offline.
+It has basic service worker that caches the requests and user can enjoy the app while being offline.
 
 User can save the app to home screen to quickly access it.
 
-The apps has progressive enhancement features like localStorage support.
+The apps has progressive enhancement features like localStorage support to save the tree data.
 
 I also spent some time on accessibility:
 * App has correct headings structure
-* Editor area is a form with all inputs properly labeled
-* Rendered tree has all proper aria attributes and has basic keyboard support. The tree should be properly represented to screen reader users. Whole page is comfortable to use just with keyboard - so no need to leave your cup on a table.
+* Editor area is a `<form>` with all inputs properly labeled
+* Rendered tree has all proper aria attributes and has basic keyboard support. The tree should be properly represented to screen reader users. 
+* Whole page is comfortable to use just with keyboard - so no need to leave your cup on a table.
 
 ## Google Lighthouse Audit
-As it was already mentioned, this is Progressive Web App, so it works offline.
 
-This app is 13k in total and loads really fast - css is inlined in `<head>`, js bundle goes to the end of `<body>`.
+This app is 13k in total and loads really fast - CSS is inlined in `<head>`, JS bundle goes to the end of `<body>`.
 
 As the result, the app has this score:
 * 99 - Performance
@@ -37,9 +37,9 @@ Please see the screenshot:
 ![Google Lighthouse score](https://i.imgur.com/7OZoCC1.png)
 
 ## Technology Used
-I used [Preact](https://preactjs.com/) with [Preact Compat](https://www.npmjs.com/package/preact-compat) that allows to use write React code and save a lot of bandwith at the same time (it's about 3k g-zipped).
+I used [Preact](https://preactjs.com/) with [Preact Compat](https://www.npmjs.com/package/preact-compat) that allows to write React code and saves a lot of bandwidth at the same time (Preact is about 3k g-zipped).
 
-I bootstrapped the project using [Preact-CLI](https://github.com/developit/preact-cli). It gives the all modern developer experience including
+I bootstrapped the project using [Preact-CLI](https://github.com/developit/preact-cli). It has these features out of the box:
 * Webpack
 * ES6 transpiling + polyfills
 * CSS preprocessors
