@@ -1,0 +1,27 @@
+.tree .tree {
+  margin-left: 25px;
+}
+
+.tree__item {
+  line-height: 40px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.tree__item > ul {
+  display: none;
+}
+
+.tree__item--expandable:before {
+  content: '\002BC8';
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.tree__item--expanded:before {
+  transform: rotate(90deg);
+}
+
+.tree__item--expanded > ul {
+  display: block;
+}

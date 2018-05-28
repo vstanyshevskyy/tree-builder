@@ -1,0 +1,35 @@
+header {
+  background-color: #2e2e30;
+  color: #fff;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.5);
+  margin-bottom: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.app__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.settings,
+.result {
+  width: 49%;
+  padding: 10px;
+}
+
+@media screen and (max-width: 720px) {
+  .app__wrapper {
+    flex-direction: column;
+  }
+  .settings,
+  .result {
+    width: 100%;
+  }
+}
