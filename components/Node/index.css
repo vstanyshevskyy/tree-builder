@@ -13,13 +13,19 @@
 }
 
 .tree__item--expandable:before {
-  content: '\002BC8';
+  content: '';
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 10px;
+  margin-top: -4px;
+  font-weight: bold;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+  transform: rotate(-45deg);
 }
 
 .tree__item--expanded:before {
-  transform: rotate(90deg);
+  transform: rotate(45deg);
 }
 
 .tree__item--expanded > ul {
