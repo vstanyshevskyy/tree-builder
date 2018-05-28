@@ -12,9 +12,11 @@ export default () => (
       title="Tree Builder Demo"
       titleAttributes={{ itemprop: 'name', lang: 'en' }}
       meta={[
-        { name: 'canonical', content: 'https://tree-builder.netlify.com' },
         { name: 'description', content: 'Tree Builder Demo - see what app i can do' },
         { property: 'og:type', content: 'website' }
+      ]}
+      link={[
+        { rel: 'canonical', href: 'https://tree-builder.netlify.com/' }
       ]}
       noscript={[
         { innerHTML: 'Please enable JS to see the app' }
