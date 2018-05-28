@@ -13,10 +13,13 @@ export default () => (
       titleAttributes={{ itemprop: 'name', lang: 'en' }}
       meta={[
         { name: 'description', content: 'Tree Builder Demo - see what app i can do' },
-        { property: 'og:type', content: 'website' }
+        { property: 'og:type', content: 'website' },
+        { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
+        { name: 'apple-mobile-web-app-capable', content: 'yes' }
       ]}
       link={[
-        { rel: 'canonical', href: 'https://tree-builder.netlify.com/' }
+        { rel: 'canonical', href: 'https://tree-builder.netlify.com/' },
+        { rel: 'apple-touch-icon', size: '152x152', href: 'https://tree-builder.netlify.com/assets/apple-touch-icon.png' }
       ]}
       noscript={[
         { innerHTML: 'Please enable JS to see the app' }
