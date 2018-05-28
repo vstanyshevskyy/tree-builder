@@ -1,6 +1,13 @@
 import './index.css';
-
+import PropTypes from 'prop-types';
 import React from 'react';
+
+const KEY_CODES = {
+  SPACE: 32,
+  ENTER: 13,
+  L_ARR: 37,
+  R_ARR: 39
+};
 
 class Node extends React.Component {
   getClassName() {
@@ -20,10 +27,10 @@ class Node extends React.Component {
   }
   handleKeyboard(e) {
     switch (e.which) {
-    case 32: //SPACE
-    case 13: //ENTER
-    case 37: //left arrow
-    case 39: //right arrow
+    case KEY_CODES.SPACE:
+    case KEY_CODES.ENTER:
+    case KEY_CODES.L_ARR:
+    case KEY_CODES.R_ARR:
       this.toggleTree(e);
       break;
     }
@@ -76,5 +83,13 @@ class Node extends React.Component {
       </li>);
   }
 }
+
+Node.PropTypes = {
+  index: PropTypes.number,
+  level: PropTypes.number,
+  siblingsCount: PropTypes.number,
+  title: PropTypes.string,
+  nodes: PropTypes.array
+};
 
 export default Node;

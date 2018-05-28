@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './index.css';
 
 class InputForm extends React.Component {
@@ -21,7 +22,10 @@ class InputForm extends React.Component {
   render() {
     return (
       <form className="form" onSubmit={this.onSubmit}>
-        <label htmlFor="raw_tree">Value to render</label>
+        <label htmlFor="raw_tree">
+          Enter a raw tree structure to see it rendered on the right side. <br />
+          Use double space to nest items
+        </label>
         <textarea
           id="raw_tree"
           className="form__input"
@@ -32,5 +36,10 @@ class InputForm extends React.Component {
       </form>);
   }
 }
+
+InputForm.PropTypes = {
+  onSettingsChange: PropTypes.func,
+  rawTree: PropTypes.string
+};
 
 export default InputForm;
